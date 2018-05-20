@@ -1,4 +1,4 @@
-FROM golang:1.10.2
+FROM golang:1.10-stretch
 
 # Install Node.js related dependencies
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
