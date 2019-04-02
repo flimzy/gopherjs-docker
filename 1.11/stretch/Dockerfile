@@ -8,5 +8,6 @@ RUN npm install --global node-gyp source-map-support
 
 # Install GopherJS
 RUN go get -u github.com/gopherjs/gopherjs
+RUN ( cd $GOPATH/src/github.com/gopherjs/gopherjs && git checkout go1.11 )
 # Add syscall support
 RUN ( cd $GOPATH/src/github.com/gopherjs/gopherjs/node-syscall && node-gyp rebuild && mkdir -p ~/.node_libraries/ && cp build/Release/syscall.node ~/.node_libraries/syscall.node )
